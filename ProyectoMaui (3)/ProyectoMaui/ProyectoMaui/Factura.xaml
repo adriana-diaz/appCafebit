@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMaui.Factura"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Title=""
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BGGray}">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Logo y encabezado -->
+            <Image Source="cafebittituloblanco.png" WidthRequest="100" HeightRequest="90" Margin="-288,-20,0,0"/>
+            <Image Source="cafetirado.png" WidthRequest="110" HeightRequest="110" Margin="350,-120,0,0"/>
+
+            <Label Text="Gracias por tu compra!"
+                   FontSize="24" 
+                   HorizontalOptions="Center" 
+                   TextColor="White"/>
+
+            <!-- Animación Lottie -->
+            <skia:SKLottieView Source="Animation.json"
+                               RepeatCount="-1"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               WidthRequest="200"
+                               HeightRequest="200" />
+
+            <Label Text="Factura" 
+                   FontSize="18" 
+                   HorizontalOptions="Center" 
+                   TextColor="White" />
+
+            <!-- Detalles de la factura -->
+            <VerticalStackLayout x:Name="FacturaDetalles" Spacing="10">
+                <!-- Aquí se llenarán los datos de la factura -->
+            </VerticalStackLayout>
+
+            <!-- Título Artículos -->
+            <Label Text="Artículos:" 
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   TextColor="White" 
+                   Margin="0,10,0,5" />
+
+            <!-- Lista de productos -->
+            <Grid x:Name="ProductosGrid" RowSpacing="5" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*" />
+                    <!-- Cantidad -->
+                    <ColumnDefinition Width="4*" />
+                    <!-- Producto -->
+                    <ColumnDefinition Width="2*" />
+                    <!-- Precio unitario -->
+                    <ColumnDefinition Width="2*" />
+                    <!-- Precio total -->
+                </Grid.ColumnDefinitions>
+                <!-- Encabezados -->
+                <Label Text="Cantidad" FontAttributes="Bold" TextColor="White" Grid.Column="0" />
+                <Label Text="Producto" FontAttributes="Bold" TextColor="White" Grid.Column="1" />
+                <Label Text="Precio unit" FontAttributes="Bold" TextColor="White" Grid.Column="2" />
+                <Label Text="Precio total" FontAttributes="Bold" TextColor="White" Grid.Column="3" />
+            </Grid>
+
+            <!-- Total -->
+            <Label Text="Total:" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Start"
+                   Margin="0,10,0,0" />
+            <Label x:Name="TotalLabel" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Start" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

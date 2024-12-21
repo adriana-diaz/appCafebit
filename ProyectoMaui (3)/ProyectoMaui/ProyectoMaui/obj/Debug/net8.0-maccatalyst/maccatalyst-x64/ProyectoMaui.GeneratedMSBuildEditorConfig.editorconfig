@@ -1,0 +1,97 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoMaui
+build_property.ProjectDir = C:\Users\adria\Downloads\ProyectoMaui (3)\ProyectoMaui\ProyectoMaui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/CarritoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.CarritoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CarritoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CarritoPage.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/Factura.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.Factura.xaml
+build_metadata.AdditionalFiles.TargetPath = Factura.xaml
+build_metadata.AdditionalFiles.RelativePath = Factura.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/MenuPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.MenuPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MenuPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MenuPage.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/Perfil.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.Perfil.xaml
+build_metadata.AdditionalFiles.TargetPath = Perfil.xaml
+build_metadata.AdditionalFiles.RelativePath = Perfil.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/ProductoPageCLS.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.ProductoPageCLS.xaml
+build_metadata.AdditionalFiles.TargetPath = ProductoPageCLS.xaml
+build_metadata.AdditionalFiles.RelativePath = ProductoPageCLS.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/RegisterarsePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.RegisterarsePage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterarsePage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterarsePage.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/adria/Downloads/ProyectoMaui (3)/ProyectoMaui/ProyectoMaui/TarjetaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoMaui.TarjetaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TarjetaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TarjetaPage.xaml

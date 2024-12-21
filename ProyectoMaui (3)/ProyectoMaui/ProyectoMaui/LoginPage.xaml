@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMaui.LoginPage"
+             BackgroundImageSource="fondo.jpg"
+             NavigationPage.HasNavigationBar="False"
+             Title="">
+    <Grid>
+        <VerticalStackLayout Spacing="20" Padding="30">
+
+            <Image Source="logocirculo.png"
+                   HorizontalOptions="Center"
+                   WidthRequest="190"
+                   HeightRequest="150" />
+
+            <Entry Placeholder="Correo electrónico"
+                   x:Name="txtEmail"
+                   Keyboard="Email"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50" />
+
+            <Entry Placeholder="Contraseña"
+                   x:Name="txtPassword"
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,10,0,0"
+                   HeightRequest="50" />
+
+            <Button Text="Login"
+                    BackgroundColor="#4A9B8C"
+                    TextColor="White"
+                    WidthRequest="280"
+                    Margin="0,10,0,0"
+                    Clicked="OnLoginClicked" />
+
+            <Label Text="¿No tienes cuenta? Regístrate"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+
+        <!-- Indicador de carga -->
+        <Grid x:Name="LoadingGrid" IsVisible="False" BackgroundColor="#88000000" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+            <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" Color="White" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="LoadingLabel" Text="Esperando..." FontSize="18" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,50,0,0" />
+        </Grid>
+
+    </Grid>
+</ContentPage>

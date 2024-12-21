@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMaui.Perfil"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BGGray}">
+    <Grid>
+        <VerticalStackLayout Spacing="20" Padding="30">
+
+            <Image Source="cafebittituloblanco.png"
+                   HorizontalOptions="Center"
+                   WidthRequest="190"
+                   HeightRequest="150" />
+
+            <!-- Nombre -->
+            <Entry x:Name="NombreEntry"
+                   Placeholder="Nombre" 
+                   Keyboard="Default"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50" />
+
+            <!-- Email -->
+            <Entry x:Name="EmailEntry"
+                   Placeholder="Email" 
+                   Keyboard="Email"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50" />
+
+            <!-- Contraseña -->
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Contraseña " 
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50" />
+
+            <!-- Botón de Actualizar -->
+            <Button Text="Actualizar" 
+                    BackgroundColor="#4A9B8C"
+                    TextColor="White"
+                    WidthRequest="200"
+                    Clicked="OnUpdateClicked" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

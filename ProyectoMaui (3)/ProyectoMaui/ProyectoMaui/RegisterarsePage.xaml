@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMaui.RegisterarsePage"
+             Title="RegisterarsePage"
+             BackgroundImageSource="fondo.jpg"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <VerticalStackLayout Spacing="20" Padding="30">
+            <Image Source="logocirculo.png"
+                   HorizontalOptions="Center"
+                   WidthRequest="190"
+                   HeightRequest="150" />
+
+            <!-- Cédula -->
+            <Entry Placeholder="Cédula"
+                   Keyboard="Numeric"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50"
+                   x:Name="txtCedula" />
+
+            <!-- Nombre -->
+            <Entry Placeholder="Nombre"
+                   Keyboard="Default"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50"
+                   x:Name="txtNombre" />
+
+            <!-- Email -->
+            <Entry Placeholder="Email"
+                   Keyboard="Email"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50"
+                   x:Name="txtEmail" />
+
+            <!-- Contraseña -->
+            <Entry Placeholder="Contraseña"
+                   IsPassword="True"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   BackgroundColor="#80FFFFFF"
+                   WidthRequest="280"
+                   Margin="0,20,0,0"
+                   HeightRequest="50"
+                   x:Name="txtPassword" />
+
+            <!-- Botón de Registro -->
+            <Button Text="Registrar"
+                    BackgroundColor="#4A9B8C"
+                    TextColor="White"
+                    WidthRequest="200"
+                    Clicked="OnSignUpClicked" />
+        </VerticalStackLayout>
+
+        <!-- Indicador de carga -->
+        <Grid x:Name="LoadingGrid" IsVisible="False" BackgroundColor="#88000000" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+            <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" Color="White" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="LoadingLabel" Text="Esperando..." FontSize="18" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,50,0,0" />
+        </Grid>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,132 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoMaui.TarjetaPage"
+             Title=""
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource BGGray}">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <!-- Logo y encabezado -->
+                <Image Source="cafebittituloblanco.png" WidthRequest="100" HeightRequest="90" Margin="-288,-20,0,0"/>
+                <Image Source="cafetirado.png" WidthRequest="110" HeightRequest="110" Margin="350,-120,0,0"/>
+                <!-- Encabezado -->
+                <Label Text="Proceder con el pago" 
+                       FontSize="24" 
+                       FontFamily="Sora"
+                       HorizontalOptions="Center" 
+                       TextColor="White" />
+                <Label Text="Se aceptan solo tarjetas*"
+                       FontSize="16" 
+                       FontFamily="Sora"
+                       HorizontalOptions="Center" 
+                       TextColor="White" />
+
+                <!-- RadioButton personalizado -->
+                <Frame BackgroundColor="#333" Padding="10" CornerRadius="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Usar tarjeta guardada" TextColor="White" FontSize="16" VerticalOptions="Center" />
+                        <Switch x:Name="SavedCardsSwitch" Toggled="OnSavedCardsToggled" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Menú desplegable para tarjetas guardadas -->
+                <Frame x:Name="SavedCardsMenu" IsVisible="False" Padding="10" BackgroundColor="#222" CornerRadius="10">
+                    <VerticalStackLayout>
+                        <Label Text="Tus tarjetas guardadas:" TextColor="White" FontSize="14" FontAttributes="Bold" />
+                        <CollectionView x:Name="SavedCardsList" SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="10" BackgroundColor="#444" Margin="0,5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="40" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Información de la tarjeta -->
+                                        <StackLayout Grid.Column="0">
+                                            <Label Text="{Binding numero_trajeta}" TextColor="White" FontSize="14" />
+                                            <Label Text="{Binding fecha_expiracion, StringFormat='Expira: {0:yyyy-MM-dd}'}" TextColor="White" FontSize="12" />
+                                        </StackLayout>
+
+                                        <!-- RadioButton con CheckedChanged -->
+                                        <RadioButton GroupName="SavedCards"
+                                                     Grid.Column="1"
+                                                     CheckedChanged="OnCardChecked" />
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Formulario de pago -->
+                <VerticalStackLayout Spacing="10">
+                    <Entry Placeholder="Número de Tarjeta"
+                           x:Name="CardNumberEntry"
+                           Keyboard="Numeric"
+                           FontFamily="Sora"
+                           TextColor="White" 
+                           Margin="0,0,0,10"
+                           PlaceholderColor="LightGray" />
+                    <Entry Placeholder="Fecha de expiración (yyyy-MM-dd)"
+                           x:Name="ExpirationDateEntry"
+                           Keyboard="Text"
+                           FontFamily="Sora"
+                           TextColor="White" 
+                           Margin="0,0,0,10"
+                           PlaceholderColor="LightGray" />
+                    <Entry Placeholder="CVV"
+                           x:Name="CVVEntry"
+                           Keyboard="Numeric"
+                           FontFamily="Sora"
+                           TextColor="White" 
+                           Margin="0,0,0,10"
+                           PlaceholderColor="LightGray" />
+                    <Button Text="Registrar tarjeta"
+                            BackgroundColor="#4A9B8C"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            Clicked="OnRegisterCardClicked" />
+                </VerticalStackLayout>
+
+                <!-- Sección de Total y Botón de Pago -->
+                <Frame BackgroundColor="#F4F4F4" CornerRadius="10" Padding="15" Margin="0,130,0,0">
+                    <Grid ColumnDefinitions="*,0*"
+                          VerticalOptions="End">
+                        <!-- Total -->
+                        <VerticalStackLayout>
+                            <Label Text="Total:"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="Black" />
+                            <Label x:Name="TotalLabel" 
+                                 FontSize="18"
+                                 FontAttributes="Bold"
+                                 TextColor="Black" />
+                        </VerticalStackLayout>
+
+
+                        <!-- Botón de Pago -->
+                        <Button Text="Pagar"
+                                BackgroundColor="#4A9B8C"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HeightRequest="50"
+                                HorizontalOptions="End"
+                                VerticalOptions="End" 
+                                Margin="0,0,0,0"
+                                Clicked="OnPayNowClicked"/>
+                    </Grid>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Indicador de carga -->
+        <Grid x:Name="LoadingGrid" IsVisible="False" BackgroundColor="#88000000" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All">
+            <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" Color="White" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label Text="Esperando..." FontSize="18" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,50,0,0" />
+        </Grid>
+    </Grid>
+</ContentPage>
